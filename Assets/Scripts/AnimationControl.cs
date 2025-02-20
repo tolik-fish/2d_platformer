@@ -8,6 +8,11 @@ public class AnimationControl : MonoBehaviour
 
     protected Animator Animator;
 
+    private void Awake()
+    {
+        Animator = GetComponent<Animator>();
+    }
+
     protected void PlayRun()
     {
         Animator.SetInteger(StateName, RunNumber);

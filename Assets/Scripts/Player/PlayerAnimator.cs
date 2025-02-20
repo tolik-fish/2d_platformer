@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerAnimator : AnimationControl
 {
-    protected const int FallNumber = 2;
+    private const int FallNumber = 2;
 
     private PlayerStateManager _stateManager;
 

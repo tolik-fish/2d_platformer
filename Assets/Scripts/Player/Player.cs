@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(PlayerStateManager), typeof(AnimationControl))]
+[RequireComponent(typeof(PlayerStateManager), typeof(PlayerAnimator))]
 public class Player : MonoBehaviour
 {
     private int _coins = 0;
