@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerMover))]
-public class InputControl : MonoBehaviour
+public class InputReader : MonoBehaviour
 {
     private const string Horizontal = nameof(Horizontal);
     private const KeyCode CodeKey = KeyCode.Space;

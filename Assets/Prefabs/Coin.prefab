@@ -120,7 +120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b37afa2cc327c61498027a4a0e8831a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: -2733368047999788684, guid: e7700ebf09c8a2b449f2b6461b79ba4a, type: 3}
 --- !u!70 &-6767739854514616821
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

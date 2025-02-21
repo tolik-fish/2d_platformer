@@ -2,9 +2,8 @@ using UnityEngine;
 
 public class GroundDetector : MonoBehaviour
 {
-    private const string LayerName = "Ground";
-
-    [SerializeField] private float _RaycastDistance;
+    [SerializeField] private LayerMask _layerMask;
+    [SerializeField] private float _raycastDistance;
 
     private bool _isGrounded;
 
@@ -12,14 +11,14 @@ public class GroundDetector : MonoBehaviour
 
     private void Update()
     {
-        _isGrounded = SetBool();
+        _isGrounded = TryFindGround();
     }
 
-    private bool SetBool()
+    private bool TryFindGround()
     {
         Vector2 position = transform.position;
 
-        RaycastHit2D hit = Physics2D.Raycast(position, Vector2.down, -_RaycastDistance, LayerMask.GetMask(LayerName));
+        RaycastHit2D hit = Physics2D.Raycast(position, Vector2.down, -_raycastDistance, _layerMask);
 
         if (hit.collider != null)
             return true;

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(SnakeStateManager), typeof(SnakeMover))]
+[RequireComponent(typeof(Rigidbody2D), typeof(SnakeStateMachine), typeof(SnakeMover))]
 public class Snake : MonoBehaviour
 {
     [SerializeField] private List<Transform> _points;

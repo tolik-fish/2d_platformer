@@ -2318,6 +2318,14 @@ PrefabInstance:
       propertyPath: _RaycastDistance
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 1297753629580842217, guid: 9bf909e0c0cadde4bb7698cba74dccea, type: 3}
+      propertyPath: _raycastDistance
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297753629580842217, guid: 9bf909e0c0cadde4bb7698cba74dccea, type: 3}
+      propertyPath: _layerMask.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2519569136296412450, guid: 9bf909e0c0cadde4bb7698cba74dccea, type: 3}
       propertyPath: Speed
       value: 3
@@ -2566,6 +2574,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1297753629580842217, guid: 9bf909e0c0cadde4bb7698cba74dccea, type: 3}
+      propertyPath: _raycastDistance
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297753629580842217, guid: 9bf909e0c0cadde4bb7698cba74dccea, type: 3}
+      propertyPath: _layerMask.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2773800622546677939, guid: 9bf909e0c0cadde4bb7698cba74dccea, type: 3}
       propertyPath: _points.Array.size
       value: 2
@@ -2743,6 +2759,14 @@ PrefabInstance:
     - target: {fileID: 6608174312540942762, guid: e7700ebf09c8a2b449f2b6461b79ba4a, type: 3}
       propertyPath: _jumpForce
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625295023341237497, guid: e7700ebf09c8a2b449f2b6461b79ba4a, type: 3}
+      propertyPath: _raycastDistance
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625295023341237497, guid: e7700ebf09c8a2b449f2b6461b79ba4a, type: 3}
+      propertyPath: _layerMask.m_Bits
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7767559050692920867, guid: e7700ebf09c8a2b449f2b6461b79ba4a, type: 3}
       propertyPath: m_Constraints

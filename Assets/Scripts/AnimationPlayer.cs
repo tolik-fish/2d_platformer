@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AnimationControl : MonoBehaviour
+public class AnimationPlayer : MonoBehaviour
 {
     protected const string StateName = "State";
     protected const int StandNumber = 0;
@@ -8,17 +8,17 @@ public class AnimationControl : MonoBehaviour
 
     protected Animator Animator;
 
-    private void Awake()
+    protected void Awake()
     {
         Animator = GetComponent<Animator>();
     }
 
-    protected void PlayRun()
+    public void PlayRun()
     {
         Animator.SetInteger(StateName, RunNumber);
     }
 
-    protected void PlayStand()
+    public void PlayStand()
     {
         Animator.SetInteger(StateName, StandNumber);
     }

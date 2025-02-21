@@ -4,11 +4,11 @@ public class PlayerMover : Mover
 {
     [SerializeField] private float _jumpForce;
 
-    private InputControl _input;
+    private InputReader _input;
 
     private void Awake()
     {
-        _input = GetComponent<InputControl>();
+        _input = GetComponent<InputReader>();
         Rigibody = GetComponent<Rigidbody2D>();
         GroundDetector = GetComponent<GroundDetector>();
     }
