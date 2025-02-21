@@ -1,19 +1,19 @@
 using UnityEngine;
 
-[RequireComponent(typeof(InputReader), typeof(GroundDetector))]
+[RequireComponent(typeof(InputReader), typeof(GroundDetector), typeof(Flipper))]
 public class PlayerStateMachine : MonoBehaviour
 {
     private InputReader _input;
     private GroundDetector _groundDetector;
-    private SpriteRenderer _render;
     private PlayerAnimator _animator;
+    private Flipper _flipper;
 
     private void Awake()
     {
         _input = GetComponent<InputReader>();
         _groundDetector = GetComponent<GroundDetector>();
-        _render = GetComponent<SpriteRenderer>();
         _animator = GetComponent<PlayerAnimator>();
+        _flipper = GetComponent<Flipper>();
     }
 
     private void OnEnable()
@@ -45,9 +45,6 @@ public class PlayerStateMachine : MonoBehaviour
         if (_groundDetector.IsGrounded)
             _animator.PlayRun();
 
-        if (value < 0)
-            _render.flipX = true;
-        else 
-            _render.flipX = false;
+        _flipper.TurnAround(value);
     }
 }

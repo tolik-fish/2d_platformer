@@ -25,7 +25,7 @@ public class Snake : MonoBehaviour
     {
         _index = 0;
 
-        SetDirection();
+        CalculateDirection();
     }
 
     private void Update()
@@ -37,11 +37,11 @@ public class Snake : MonoBehaviour
     {
         Move();
 
-        if (IsArrived())
+        if (IsReachPoint())
         {
             _index = GetNextIndex();
 
-            SetDirection();
+            CalculateDirection();
         }
     }
 
@@ -52,7 +52,7 @@ public class Snake : MonoBehaviour
         Moving?.Invoke(_direction);
     }
 
-    private void SetDirection()
+    private void CalculateDirection()
     {
         float max = 1f;
         float min = -1f;
@@ -60,7 +60,7 @@ public class Snake : MonoBehaviour
         _direction = Mathf.Clamp(_points[_index].position.x - transform.position.x, min, max);
     }
 
-    private bool IsArrived() =>
+    private bool IsReachPoint() =>
         Mathf.Abs(transform.position.x - _points[_index].position.x) < _threshold;
 
     private int GetNextIndex() =>

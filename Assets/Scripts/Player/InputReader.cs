@@ -15,7 +15,7 @@ public class InputReader : MonoBehaviour
     {
             Move();
 
-            Leap();
+            Jump();
     }
 
     private void Move()
@@ -28,7 +28,7 @@ public class InputReader : MonoBehaviour
             Standing?.Invoke();
     }
 
-    private void Leap()
+    private void Jump()
     {
         if (Input.GetKeyDown(CodeKey))
             Jumping?.Invoke();

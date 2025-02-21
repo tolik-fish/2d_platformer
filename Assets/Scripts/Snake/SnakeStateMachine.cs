@@ -1,21 +1,17 @@
-using System;
 using UnityEngine;
 
-[RequireComponent(typeof(SnakeAnimator),typeof(SpriteRenderer))]
+[RequireComponent(typeof(SnakeAnimator),typeof(SpriteRenderer), typeof(Flipper))]
 public class SnakeStateMachine : MonoBehaviour
 {
-    private SpriteRenderer _render;
     private Snake _snake;
     private SnakeAnimator _animator;
-
-    public event Action Standing;
-    public event Action Running;
+    private Flipper _flipper;
 
     private void Awake()
     {
-        _render = GetComponent<SpriteRenderer>();
         _snake = GetComponent<Snake>();
         _animator = GetComponent<SnakeAnimator>();
+        _flipper = GetComponent<Flipper>();
     }
 
     private void OnEnable()
@@ -34,10 +30,7 @@ public class SnakeStateMachine : MonoBehaviour
     {
         _animator.PlayRun();
 
-        if (value < 0)
-            _render.flipX = true;
-        else 
-            _render.flipX = false;
+        _flipper.TurnAround(value);
     }
 
     private void PlayAnimationStanding() =>

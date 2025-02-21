@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 2773800622546677939}
   - component: {fileID: 2519569136296412450}
   - component: {fileID: 6818161019874062801}
+  - component: {fileID: 3436604977029485116}
   m_Layer: 0
   m_Name: Snake
   m_TagString: Untagged
@@ -209,7 +210,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9db3fd18265a45d4f85deeb2ed1e15ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _RaycastDistance: 0
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  _raycastDistance: 0
 --- !u!114 &2773800622546677939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,5 +250,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 822f0295b2ffd214a93edaf98b101680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3436604977029485116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8536142907002127260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a287b1d3e448b47bb8f6a55a3bfeac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
