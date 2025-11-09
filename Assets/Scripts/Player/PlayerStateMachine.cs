@@ -20,12 +20,14 @@ public class PlayerStateMachine : MonoBehaviour
     {
         _input.Standing += PlayAnimationStanding;
         _input.Running += PlayAnimationRunning;
+        _input.Attacking += PlayAnimationAttacking;
     }
 
     private void OnDisable()
     {
         _input.Standing -= PlayAnimationStanding;
         _input.Running -= PlayAnimationRunning;
+        _input.Attacking -= PlayAnimationAttacking;
     }
 
     private void Update()
@@ -38,6 +40,12 @@ public class PlayerStateMachine : MonoBehaviour
     {
         if (_groundDetector.IsGrounded)
             _animator.PlayStand();
+    }
+
+    private void PlayAnimationAttacking()
+    {
+        if (_groundDetector.IsGrounded)
+            _animator.PlayAttack();
     }
 
     private void PlayAnimationRunning(float value)

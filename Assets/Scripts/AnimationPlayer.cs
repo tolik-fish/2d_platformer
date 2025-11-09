@@ -5,6 +5,7 @@ public class AnimationPlayer : MonoBehaviour
     protected const string StateName = "State";
     protected const int StandNumber = 0;
     protected const int RunNumber = 1;
+    protected const int AttackNumber = 3;
 
     protected Animator Animator;
 
@@ -21,5 +22,10 @@ public class AnimationPlayer : MonoBehaviour
     public void PlayStand()
     {
         Animator.SetInteger(StateName, StandNumber);
+    }
+
+    public void PlayAttack()
+    {
+        Animator.SetInteger(StateName, AttackNumber);
     }
 }

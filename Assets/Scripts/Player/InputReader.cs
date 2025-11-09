@@ -5,17 +5,28 @@ using UnityEngine;
 public class InputReader : MonoBehaviour
 {
     private const string Horizontal = nameof(Horizontal);
-    private const KeyCode CodeKey = KeyCode.Space;
+    private const KeyCode JumpKey = KeyCode.Space;
+    private const KeyCode AttackKey = KeyCode.L;
+
+    private Player _player;
 
     public event Action Standing;
     public event Action Jumping;
     public event Action<float> Running;
+    public event Action Attacking;
+
+    private void Awake()
+    {
+        _player = GetComponent<Player>();
+    }
 
     private void Update()
     {
-            Move();
+        Move();
 
-            Jump();
+        Jump();
+
+        Attack();
     }
 
     private void Move()
@@ -30,7 +41,13 @@ public class InputReader : MonoBehaviour
 
     private void Jump()
     {
-        if (Input.GetKeyDown(CodeKey))
+        if (Input.GetKeyDown(JumpKey))
             Jumping?.Invoke();
+    }
+
+    private void Attack()
+    {
+        if (Input.GetKeyDown(AttackKey))
+            Attacking?.Invoke();
     }
 }

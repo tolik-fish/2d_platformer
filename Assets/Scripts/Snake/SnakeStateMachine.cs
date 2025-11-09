@@ -18,6 +18,7 @@ public class SnakeStateMachine : MonoBehaviour
     {
         _snake.Moving += PlayAnimationMoving;
         _snake.Standing += PlayAnimationStanding;
+        _snake.Attacking += PlayAnimationAttack;
     }
 
     private void OnDisable()
@@ -35,4 +36,7 @@ public class SnakeStateMachine : MonoBehaviour
 
     private void PlayAnimationStanding() =>
         _animator.PlayStand();
+
+    private void PlayAnimationAttack() =>
+        _animator.PlayAttack();
 }

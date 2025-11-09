@@ -7,11 +7,12 @@ public class GroundDetector : MonoBehaviour
 
     private bool _isGrounded;
 
-    public bool IsGrounded => _isGrounded;
+    public bool IsGrounded;
 
     private void Update()
     {
         _isGrounded = TryFindGround();
+        IsGrounded = _isGrounded;
     }
 
     private bool TryFindGround()
