@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84edc474b29657d49bfe2fe2a5e11b01, type: 3}
+  m_Name: PlayerSetting
+  m_EditorClassIdentifier: 
+  <MoveSpeed>k__BackingField: 1.18
+  <MaxSpeed>k__BackingField: 11.73
+  <JumpForce>k__BackingField: 26
+  <AttackRange>k__BackingField: 2
+  <AttackDamage>k__BackingField: 25
+  <AttackSpeed>k__BackingField: 55
+  <MaxHealthValue>k__BackingField: 1000
+  <EnemyLayerMask>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 64

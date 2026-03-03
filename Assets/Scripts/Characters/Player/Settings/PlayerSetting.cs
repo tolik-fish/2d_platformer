@@ -1,0 +1,21 @@
+﻿using UnityEngine;
+
+[CreateAssetMenu(fileName = "PlayerSetting", menuName = "PlayerSettings/new PlayerSetting")]
+public class PlayerSetting : ScriptableObject, IPlayerSetting
+{
+    [field: SerializeField] public float MoveSpeed { get; private set; }
+
+    [field: SerializeField] public float MaxSpeed { get; private set; }
+
+    [field: SerializeField] public float JumpForce { get; private set; }
+
+    [field: SerializeField] public float AttackRange { get; private set; }
+
+    [field: SerializeField] public float AttackDamage { get; private set; }
+
+    [field: SerializeField] public float AttackSpeed { get; private set; }
+
+    [field: SerializeField] public float MaxHealthValue { get; private set; }
+
+    [field: SerializeField] public LayerMask EnemyLayerMask { get; private set; }
+}
